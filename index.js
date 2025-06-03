@@ -4,6 +4,7 @@ import si from "systeminformation";
 const wss = new WebSocketServer({ port: 8060 });
 
 wss.on("connection", function connection(ws) {
+    
     ws.on("message", function message(data) {
         console.log("received: %s", data);
     });
